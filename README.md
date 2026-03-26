@@ -53,3 +53,19 @@
 
 ---
 ## RESULTADO 💻
+
+*Foram feitas a soma de 10 + 5, a divisão de 20 por 2 e também foi feita a tentativa de dividir por 0 para testar a `DivisaoPorZeroException`.*
+
+![](./images/printOperacoesMatematicas.png)
+
+> ***Para melhor visualização dos códigos, segue abaixo:***
+
+[Divisao.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Divisao.java)
+
+[DivisaoPorZeroException.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/DivisaoPorZeroException.java)
+
+[Main.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Main.java)
+
+[OperacaoMatematica.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/OperacaoMatematica.java)
+
+[Soma.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Soma.java)
