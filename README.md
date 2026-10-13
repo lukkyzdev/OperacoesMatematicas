@@ -1,71 +1,36 @@
-# <img align="center" alt="Fontes-Java" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg"> ATIVIDADE PRÁTICA ADS - Desenvolver um Programa em JAVA Que Simule Operações Matemáticas Utilizando Classe Abstrata e Tratamento de Exceções.
+# <img align="center" alt="Java" height="40" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"> Sistema de Operações Matemáticas
 
-## ORIENTAÇÃO DO PROJETO 📝
+Uma aplicação de consola desenvolvida em Java para consolidar os fundamentos de **Programação Orientada a Objetos (POO)** e **Tratamento de Exceções**. 
 
-### *Atividade Proposta: Desenvolver um programa em Java que simule operações matemáticas utilizando classe abstrata e tratamento de exceções.*
+O projeto estrutura operações matemáticas utilizando herança e abstração, implementando regras de negócio rigorosas para prevenir falhas críticas durante a execução (como a divisão por zero).
 
-*O aluno deverá:*
+## 🎯 Objetivo do Projeto
+Este projeto foi construído para aplicar na prática conceitos estruturais exigidos no desenvolvimento de software robusto, focando em:
+- Criação de contratos de código através de classes abstratas.
+- Prevenção de interrupções abruptas do sistema (crashes) através da captura e tratamento de erros.
+- Aplicação de polimorfismo para tornar o código extensível e limpo.
 
-***1- Criar uma classe abstrata chamada `OperacaoMatematica`, com um método abstrato `double calcular(double a, double b)`.***
+## 💻 Tecnologias e Conceitos Aplicados
+- **Java (Core):** Linguagem principal do desenvolvimento.
+- **Abstração e Herança:** Criação da classe abstrata `OperacaoMatematica`, servindo de base estrutural (contrato) para as classes filhas `Soma` e `Divisao`.
+- **Polimorfismo:** Implementação do método `.calcular()`, onde cada classe instanciada responde de forma independente e específica ao mesmo comando.
+- **Tratamento de Exceções:** Uso de blocos `try-catch` e criação da exceção personalizada `DivisaoPorZeroException` (`extends Exception`) para gerir cenários inválidos e devolver mensagens claras ao utilizador.
 
-***2- Criar duas classes concretas que herdam de `OperacaoMatematica`:***
+## 🚀 Como Funciona
+A lógica central é executada na classe `Main`. O sistema instancia as diferentes operações matemáticas e invoca o método de cálculo. Para validar a resiliência do código, é forçada uma divisão por zero, o que ativa a rede de proteção do `try-catch` e exibe o erro sem quebrar a aplicação.
 
-- *Soma: implementa o método para somar dois valores.*
-- *Divisao: implementa o método para dividir dois valores, mas lança uma exceção personalizada caso o segundo valor (b) seja zero.*
+### Demonstração de Uso
+Abaixo está a saída gerada no terminal após a execução dos cálculos e da captura da exceção:
 
-***3- Criar uma exceção personalizada chamada `DivisaoPorZeroException`, estendendo `Exception`.***
+![Demonstração do terminal executando as operações e a exceção](./images/printOperacoesMatematicas.png)
 
-***4- Criar a classe `Principal` com o método `main`, onde:***
-
-- *Serão instanciadas as classes `Soma` e `Divisao`.*
-- *Serão feitas chamadas ao método `calcular()`.*
-- *Será usado um bloco `try-catch` para tratar a exceção da divisão por zero.*
-
----
-## EXPLICAÇÃO DO PROJETO ✅
-
-- ***O projeto consistiu em transformar uma simples conta de matemática em um sistema de software robusto, onde as regras são claras, os erros são controlados e novos recursos podem ser adicionados sem quebrar o que já existe.***
-
-> *Técnicas e Métodos Utilizados*
-
-
-***Foi criada uma Classe Abstrata `(OperacaoMatematica)`. Ela não pode ser "instanciada" (criada como objeto), mas serve como um contrato: ela obriga qualquer operação filha a ter um método calcular.***
-
-
-
-***As subclasses `Soma` e `Divisao` usaram o `extends`.***
-
-- *Elas herdaram a estrutura do pai `(OperacaoMatematica)`.*
-- *Foi usado o `@Override` para escrever a lógica real (somar ou dividir) em cima do método que estava vazio no pai.*
-
-
-***Foi criada a `DivisaoPorZeroException` estendendo a classe `Exception`.***
-
-- *Isso criou um erro personalizado.*
-- *O uso do `super("Não é possível dividir por zero.")` no construtor travou uma explicação clara para o usuário, evitando que o programa trave sem aviso.*
-
-
-***Na classe `Main`, foi colocado tudo para rodar:***
-
-- ***Instanciação:*** *Criou os objetos com `new`.*
-- ***Polimorfismo:*** *Chamou o mesmo método `(calcular)`, mas cada objeto respondeu do seu jeito (um somou, outro dividiu).*
-- ***Try-Catch:*** *Criou uma rede de proteção que captura o erro de divisão por zero e exibe no `System.err`, mantendo o programa vivo.*
+## 📂 Estrutura do Código
+Para analisar o código fonte e as decisões de arquitetura, acede aos ficheiros abaixo:
+- [Contrato Abstrato (OperacaoMatematica.java)](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/OperacaoMatematica.java)
+- [Regra de Soma (Soma.java)](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Soma.java)
+- [Regra de Divisão (Divisao.java)](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Divisao.java)
+- [Tratamento de Erro (DivisaoPorZeroException.java)](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/DivisaoPorZeroException.java)
+- [Execução e Try-Catch (Main.java)](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Main.java)
 
 ---
-## RESULTADO 💻
-
-*Foram feitas a soma de 10 + 5, a divisão de 20 por 2 e também foi feita a tentativa de dividir por 0 para testar a `DivisaoPorZeroException`.*
-
-![](./images/printOperacoesMatematicas.png)
-
-> ***Para melhor visualização dos códigos, segue abaixo:***
-
-[Divisao.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Divisao.java)
-
-[DivisaoPorZeroException.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/DivisaoPorZeroException.java)
-
-[Main.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Main.java)
-
-[OperacaoMatematica.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/OperacaoMatematica.java)
-
-[Soma.java](https://github.com/lukkyzdev/OperacoesMatematicas/blob/main/src/br/edu/operacoes/Soma.java)
+*Desenvolvido por Lucas Fontes como parte da evolução contínua em Análise e Desenvolvimento de Sistemas.*
